@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
+
+
 public class PullRequestTests {
 
     private final String token = "b512d4377e5cac0c0f2e3fad4f5962d6f2c403f2";
@@ -34,20 +36,20 @@ public class PullRequestTests {
 
     @Test(description = "checking status code when trying to access pull request")
     public void checkPullRequestAccess() {
-        Response response = given().auth().oauth2(token).log().everything().get(baseURI + "/aysegul1/test/pulls").andReturn();
+        Response response = given().auth().oauth2(token).log().everything().get(baseURI + "/aysegul1/GithubAPITesting/pulls").andReturn();
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 
     @Test(dependsOnMethods = "checkPullRequestAccess", description = "create a pull request")
     public int createPullRequest() {
-        Response response = given().auth().oauth2(token).log().everything().body(prToCreate).post(baseURI + "/aysegul1/test/pulls").andReturn();
+        Response response = given().auth().oauth2(token).log().everything().body(prToCreate).post(baseURI + "/aysegul1/GithubAPITesting/pulls").andReturn();
         Assert.assertEquals(response.statusCode(), 201);
         return newPR = response.as(pullRequest.class).getNumber();
     }
 
-    @Test(description = "get newly created pull request")
+    @Test(dependsOnMethods = "createPullRequest", description = "get newly created pull request")
     public void getNewPullRequest() {
-        Response response = given().auth().oauth2(token).log().everything().get(baseURI + "/aysegul1/test/pulls/" + newPR).andReturn();
+        Response response = given().auth().oauth2(token).log().everything().get(baseURI + "/aysegul1/GithubAPITesting/pulls/" + newPR).andReturn();
         pullRequest pullRequest = response.as(pullRequest.class);
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertTrue(pullRequest.getTitle().contains("Amazing new feature"));
@@ -55,7 +57,7 @@ public class PullRequestTests {
 
     @Test(dependsOnMethods = "getNewPullRequest", description = "edit existing pull request")
     public void updateExistingPullRequest() {
-        Response response = given().auth().oauth2(token).body(prToUpdate).with().contentType("application/json").log().everything().patch(baseURI + "/aysegul1/test/pulls/" + newPR).andReturn();
+        Response response = given().auth().oauth2(token).body(prToUpdate).with().contentType("application/json").log().everything().patch(baseURI + "/aysegul1/GithubAPITesting/pulls/" + newPR).andReturn();
         String actualTitle = response.as(pullRequest.class).getTitle();
         String expectedTitle = "new title";
 
@@ -83,7 +85,7 @@ public class PullRequestTests {
 
     @Test(dependsOnMethods = "updateExistingPullRequest", description = "delete pull request")
     public void deletePullRequest() {
-        Response response = given().auth().oauth2(token).log().everything().delete(baseURI + "/aysegul1/test/pulls/" + newPR).andReturn();
+        Response response = given().auth().oauth2(token).log().everything().delete(baseURI + "/aysegul1/GithubAPITesting/pulls/" + newPR).andReturn();
         Assert.assertEquals(response.statusCode(), 204);
     }
 }

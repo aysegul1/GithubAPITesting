@@ -18,7 +18,7 @@ public class MergedPullRequest {
 
     @BeforeClass
     public void setUp() {
-        RestAssured.baseURI = "https://api.github.com/repos/aysegul1/test/pull";
+        RestAssured.baseURI = "https://api.github.com/repos/aysegul1/GithubAPITesting/pull";
 
     }
 

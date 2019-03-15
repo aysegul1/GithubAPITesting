@@ -1,6 +1,7 @@
 I may have spent a little over 2 hours due to some troubleshooting.
 
 #**What is GitHub pull request API testing and what does it test?**
+
 GitHub pull request api automation validates GitHub's api via test user and test repository. The tests that are currently
 included verify access to certain repo, creation of pull request on a repo, updating a pull request, and deleting a pull
 request as well as merging a pull request and verifying that it is merged.
