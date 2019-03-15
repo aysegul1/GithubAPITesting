@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PullRequestTests">
+    <test name="BasicPullRequestTests">
+        <classes>
+            <class name="PullRequestTests.PullRequestTests" />
+        </classes>
+    </test>
+    <test name="MergePullRequestTests">
+        <classes>
+            <class name="PullRequestTests.MergedPullRequest" />
+        </classes>
+    </test>
+</suite>
