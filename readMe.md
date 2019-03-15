@@ -1,4 +1,7 @@
-I may have spent a little over 2 hours due to some troubleshooting.
+Coding part wasn't too bad. I think I was on time and thinking I was done with it but I troubleshooting took way too long only to find the issue is a very simple one line change.
+I have been reading about auths and did all the steps suggested on the internet with no successful results. Their status codes are not very clear. My issue wasn't all about
+authentication but I kept getting 401s. My branch head name had an issue. I got it to work last minute which left me no time to figure out the new issue of Pull Request Number is not
+getting passed to my value for get calls. I will continue troubleshooting but submitting the project as is.
 
 #**What is GitHub pull request API testing and what does it test?**
 
@@ -24,3 +27,6 @@ request as well as merging a pull request and verifying that it is merged.
 5. Type in the following command: 'git clone {Repository URL}'
 6. Once the project is cloned to your local machine, open the project in InteliJ
 7. You can do so by clicking File > Open Project
+
+The tests will need to be run individually since the number value doesn't get passed. Please run test for deleting the pull request before running another create test.
+I also have merge pull request test. Those can also be ran in order to get a successful create status.
