@@ -25,7 +25,7 @@ request as well as merging a pull request and verifying that it is merged.
 6. Once the project is cloned to your local machine, open the project in InteliJ
 7. You can do so by clicking File > Open Project
 
-
+test
 
 
 Getting tetable enviroment
