@@ -13,14 +13,13 @@ import static io.restassured.RestAssured.*;
 
 public class PullRequestTests {
 
-    private final String token = "fb3f9461a6c5cb365d4402c3e59d15b2418bdbd5";
-    private int newPR;
+    private final String token = "c7d7bba2bc25165685d9c607b1ae3a03aa990909";
+    public int newPR;
 
     String prToCreate = "{\n" +
             "  \"title\": \"Amazing new feature\",\n" +
-            "  \"head\": \"octocat:new-feature\",\n" +
-            "  \"base\":\"testingBranch\",\n" +
-            "  \"number\":\" 1\", \n" +
+            "  \"head\": \"testingBranch\",\n" +
+            "  \"base\":\"master\",\n" +
             "  \"body\": \"Please pull this in\"\n" +
             "}";
     String prToUpdate = "{\n" +
@@ -42,10 +41,11 @@ public class PullRequestTests {
     }
 
     @Test(dependsOnMethods = "checkPullRequestAccess", description = "create a pull request")
-    public int createPullRequest() {
-        Response response = given().auth().oauth2(token).log().everything().body(prToCreate).accept("application/json").post(baseURI + "/aysegul1/GithubAPITesting/pulls").andReturn();
+    public void createPullRequest() {
+        Response response = given().auth().oauth2(token).log().everything().body(prToCreate).with().contentType("application/json").post(baseURI + "/aysegul1/GithubAPITesting/pulls").andReturn();
         Assert.assertEquals(response.statusCode(), 201);
-        return newPR = response.as(pullRequest.class).getNumber();
+        newPR = response.as(pullRequest.class).getNumber();
+
     }
 
     @Test(description = "get newly created pull request")

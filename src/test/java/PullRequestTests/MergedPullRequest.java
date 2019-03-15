@@ -11,27 +11,27 @@ import static io.restassured.RestAssured.*;
 
 public class MergedPullRequest {
 
-    private final String token = "fb3f9461a6c5cb365d4402c3e59d15b2418bdbd5";
+    private final String token = "c7d7bba2bc25165685d9c607b1ae3a03aa990909";
     PullRequestTests pullRequestTests = new PullRequestTests();
-    int prNumber = pullRequestTests.createPullRequest();
+   // int prNumber = pullRequestTests.createPullRequest();
 
 
     @BeforeClass
     public void setUp() {
-        RestAssured.baseURI = "https://api.github.com/repos/aysegul1/GithubAPITesting/pull";
+        RestAssured.baseURI = "https://api.github.com/repos/aysegul1/GithubAPITesting/pulls";
 
     }
 
     @Test(description = "Merge a pull request")
     public void mergePullRequest(){
-        Response response = given().auth().oauth2(token).log().everything().put(baseURI + prNumber+"/merge").andReturn();
-        Assert.assertEquals(response.getStatusCode(), 204);
+        Response response = given().auth().oauth2(token).log().everything().put(baseURI + "/1/merge").andReturn();
+        Assert.assertEquals(response.getStatusCode(), 200);
     }
 
     @Test(dependsOnMethods = "mergePullRequest", description = "check if a pull request is merged")
     public void checkIfPRisMerged() {
-        Response response = given().auth().oauth2(token).log().everything().get(baseURI + prNumber + "/merge").andReturn();
-        Assert.assertEquals(response.getStatusCode(), 200);
+        Response response = given().auth().oauth2(token).log().everything().get(baseURI + "/1/merge").andReturn();
+        Assert.assertEquals(response.getStatusCode(), 204);
     }
 
 
