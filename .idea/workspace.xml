@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c83a329-4cf7-4d0b-addc-5ac3829fd52f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +42,8 @@
       <file leaf-file-name="readMe.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readMe.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="337">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -487,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552670916000</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pushing latest changes">
+      <created>1552674561857</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1552674561857</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -532,14 +540,14 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3291592" />
+      <window_info active="true" anchor="bottom" id="Event Log" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.41285402" />
       <window_info anchor="right" id="Maven Projects" weight="0.13539445" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41285402" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.41285402" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
@@ -581,7 +589,8 @@
     <MESSAGE value="Cosmetic changes" />
     <MESSAGE value="some more changes" />
     <MESSAGE value="rfiting readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="rfiting readme" />
+    <MESSAGE value="pushing latest changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing latest changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readMe.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="337">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
