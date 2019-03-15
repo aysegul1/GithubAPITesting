@@ -1,6 +1,6 @@
 I may have spent a little over 2 hours due to some troubleshooting.
 
-#**What is GitHub pull request API testing and what does it test?
+#**What is GitHub pull request API testing and what does it test?**
 GitHub pull request api automation validates GitHub's api via test user and test repository. The tests that are currently
 included verify access to certain repo, creation of pull request on a repo, updating a pull request, and deleting a pull
 request as well as merging a pull request and verifying that it is merged.
@@ -10,11 +10,11 @@ request as well as merging a pull request and verifying that it is merged.
 3. I was facing authentication issues at the begining
 4. The basic CRUD testing is a good way to verify the most important scope of verifying Github's pull request api
 
-#**What does it NOT test?
+#**What does it NOT test?**
 1. There are many other scopes to the api such as listing pull request, commits, users, assignees and such.
 2. It was a very open project, I thought testing basic api functionalities would be sufficient for the given time.
 
-HOW TO:
+**HOW TO:**
 
 1. Navigate to the repository link
 2. Copy the repository link from the 'Clone or Download button'
