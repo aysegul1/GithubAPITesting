@@ -26,7 +26,8 @@ request as well as merging a pull request and verifying that it is merged.
 4. Navigate to the folder where you would like to save the project to
 5. Type in the following command: 'git clone {Repository URL}'
 6. Once the project is cloned to your local machine, open the project in InteliJ
-7. You can do so by clicking File > Open Project
+7. You can do so by clicking File > Open Project > Select the project folder
+Note:
+The tests will need to be run individually since the number value doesn't get passed. So testng.xml file will result in failure to run all tests. Please run test for deleting the pull request before running another create test.
+I also have merge pull request tests. Those can also be ran in order to get a successful create status.
 
-The tests will need to be run individually since the number value doesn't get passed. Please run test for deleting the pull request before running another create test.
-I also have merge pull request test. Those can also be ran in order to get a successful create status.
