@@ -24,3 +24,8 @@ request as well as merging a pull request and verifying that it is merged.
 5. Type in the following command: 'git clone {Repository URL}'
 6. Once the project is cloned to your local machine, open the project in InteliJ
 7. You can do so by clicking File > Open Project
+
+
+
+
+Getting tetable enviroment
