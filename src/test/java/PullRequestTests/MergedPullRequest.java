@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.*;
 
 public class MergedPullRequest {
 
-    private final String token = "b512d4377e5cac0c0f2e3fad4f5962d6f2c403f2";
+    private final String token = "fb3f9461a6c5cb365d4402c3e59d15b2418bdbd5";
     PullRequestTests pullRequestTests = new PullRequestTests();
     int prNumber = pullRequestTests.createPullRequest();
 
