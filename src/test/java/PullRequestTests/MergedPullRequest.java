@@ -13,7 +13,7 @@ public class MergedPullRequest {
 
     private final String token = "c7d7bba2bc25165685d9c607b1ae3a03aa990909";
     PullRequestTests pullRequestTests = new PullRequestTests();
-   // int prNumber = pullRequestTests.createPullRequest();
+   //int prNumber = pullRequestTests.createPullRequest();
 
 
     @BeforeClass
